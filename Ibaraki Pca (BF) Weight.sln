@@ -1,0 +1,29 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32929.385
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Ibaraki Pca (BF) Weight", "Ibaraki Pca (BF) Weight\Ibaraki Pca (BF) Weight.vbproj", "{B96AA1DE-070E-418F-AEB9-2A3EE1E6968C}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Ibaraki Pca (BF) Weight Setup", "Ibaraki Pca (BF) Weight Setup\Ibaraki Pca (BF) Weight Setup.vdproj", "{4AE699AC-2D08-446A-B425-9348F4177963}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B96AA1DE-070E-418F-AEB9-2A3EE1E6968C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B96AA1DE-070E-418F-AEB9-2A3EE1E6968C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B96AA1DE-070E-418F-AEB9-2A3EE1E6968C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B96AA1DE-070E-418F-AEB9-2A3EE1E6968C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4AE699AC-2D08-446A-B425-9348F4177963}.Debug|Any CPU.ActiveCfg = Debug
+		{4AE699AC-2D08-446A-B425-9348F4177963}.Release|Any CPU.ActiveCfg = Release
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0935A83C-F07B-472F-B5B4-E7ECF3C7A8FC}
+	EndGlobalSection
+EndGlobal
