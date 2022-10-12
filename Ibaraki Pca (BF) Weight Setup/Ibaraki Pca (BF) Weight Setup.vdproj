@@ -132,10 +132,10 @@
             "ComponentsUrl" = "8:"
                 "Items"
                 {
-                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:.NETFramework,Version=v4.7.2"
+                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:.NETFramework,Version=v4.8.1"
                     {
-                    "Name" = "8:Microsoft .NET Framework 4.7.2 (x86 and x64)"
-                    "ProductCode" = "8:.NETFramework,Version=v4.7.2"
+                    "Name" = "8:Microsoft .NET Framework 4.8.1 (x86 and x64)"
+                    "ProductCode" = "8:.NETFramework,Version=v4.8.1"
                     }
                 }
             }
@@ -935,7 +935,7 @@
         {
             "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_A1C5DBD83D774C26954CBC1D92E0D695"
             {
-            "SourcePath" = "8:"
+            "SourcePath" = "8:..\\Ibaraki Pca (BF) Weight\\obj\\Release\\Ibaraki Pca (BF) Weight.exe"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_EFBD7B0A44E54918B1E8545EA54D4D72"
