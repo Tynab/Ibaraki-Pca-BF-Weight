@@ -21,6 +21,12 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_467F4CDCFD964B3985DC65525EF93657"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_70A3D57F1663D90D8BBEBC4CB2C90E3B"
         "OwnerKey" = "8:_A1C5DBD83D774C26954CBC1D92E0D695"
         "MsmSig" = "8:_UNDEFINED"
@@ -58,13 +64,13 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_70A3D57F1663D90D8BBEBC4CB2C90E3B"
+        "OwnerKey" = "8:_A1C5DBD83D774C26954CBC1D92E0D695"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_A1C5DBD83D774C26954CBC1D92E0D695"
+        "OwnerKey" = "8:_70A3D57F1663D90D8BBEBC4CB2C90E3B"
         "MsmSig" = "8:_UNDEFINED"
         }
     }
@@ -117,6 +123,22 @@
         "PrivateKeyFile" = "8:"
         "TimeStampServer" = "8:"
         "InstallerBootstrapper" = "3:2"
+            "BootstrapperCfg:{63ACBE69-63AA-4F98-B2B6-99F9E24495F2}"
+            {
+            "Enabled" = "11:TRUE"
+            "PromptEnabled" = "11:TRUE"
+            "PrerequisitesLocation" = "2:1"
+            "Url" = "8:"
+            "ComponentsUrl" = "8:"
+                "Items"
+                {
+                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:.NETFramework,Version=v4.7.2"
+                    {
+                    "Name" = "8:Microsoft .NET Framework 4.7.2 (x86 and x64)"
+                    "ProductCode" = "8:.NETFramework,Version=v4.7.2"
+                    }
+                }
+            }
         }
     }
     "Deployable"
@@ -150,6 +172,26 @@
             {
             "SourcePath" = "8:..\\res\\BSSanji.bmp"
             "TargetName" = "8:BSSanji.bmp"
+            "Tag" = "8:"
+            "Folder" = "8:_EFBD7B0A44E54918B1E8545EA54D4D72"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_467F4CDCFD964B3985DC65525EF93657"
+            {
+            "SourcePath" = "8:..\\res\\ic.ico"
+            "TargetName" = "8:ic.ico"
             "Tag" = "8:"
             "Folder" = "8:_EFBD7B0A44E54918B1E8545EA54D4D72"
             "Condition" = "8:"
@@ -333,15 +375,15 @@
         {
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:Ibaraki Pca (BF) Weight Setup"
-        "ProductCode" = "8:{126341DD-7D2E-4A21-8CCD-6FD26CC36C50}"
-        "PackageCode" = "8:{DECCDA88-1912-4CD4-8732-2715F27EF59A}"
+        "ProductCode" = "8:{E07669C0-C583-401A-BE50-06D9AFF3BA80}"
+        "PackageCode" = "8:{8F6E541E-9084-4261-A518-4E8FB6A6EF62}"
         "UpgradeCode" = "8:{03CA2215-8B12-4B15-B3D4-D8B0D73143EB}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
         "RemovePreviousVersions" = "11:TRUE"
         "DetectNewerInstalledVersion" = "11:TRUE"
         "InstallAllUsers" = "11:FALSE"
-        "ProductVersion" = "8:22.10.10"
+        "ProductVersion" = "8:22.10.12"
         "Manufacturer" = "8:YAN"
         "ARPHELPTELEPHONE" = "8:"
         "ARPHELPLINK" = "8:"
@@ -351,7 +393,7 @@
         "Keywords" = "8:"
         "ARPCOMMENTS" = "8:"
         "ARPURLINFOABOUT" = "8:"
-        "ARPPRODUCTICON" = "8:"
+        "ARPPRODUCTICON" = "8:_467F4CDCFD964B3985DC65525EF93657"
         "ARPIconIndex" = "3:0"
         "SearchPath" = "8:"
         "UseSystemSearchPath" = "11:TRUE"
@@ -465,7 +507,7 @@
             "Target" = "8:_A1C5DBD83D774C26954CBC1D92E0D695"
             "Folder" = "8:_4E72DD6EADC6490D91C68F1FA9181EC3"
             "WorkingFolder" = "8:_EFBD7B0A44E54918B1E8545EA54D4D72"
-            "Icon" = "8:"
+            "Icon" = "8:_467F4CDCFD964B3985DC65525EF93657"
             "Feature" = "8:"
             }
             "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_D884FAF46A874B91A0FE285503F65A85"
@@ -479,7 +521,7 @@
             "Target" = "8:_A1C5DBD83D774C26954CBC1D92E0D695"
             "Folder" = "8:_F0A460182D1241AF96C570BC1E8F0808"
             "WorkingFolder" = "8:_EFBD7B0A44E54918B1E8545EA54D4D72"
-            "Icon" = "8:"
+            "Icon" = "8:_467F4CDCFD964B3985DC65525EF93657"
             "Feature" = "8:"
             }
         }
@@ -893,7 +935,7 @@
         {
             "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_A1C5DBD83D774C26954CBC1D92E0D695"
             {
-            "SourcePath" = "8:..\\Ibaraki Pca (BF) Weight\\obj\\Debug\\Ibaraki Pca (BF) Weight.exe"
+            "SourcePath" = "8:"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_EFBD7B0A44E54918B1E8545EA54D4D72"

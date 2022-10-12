@@ -31,13 +31,13 @@ Friend Module Service
         PrefWarn(vbTab & vbTab & "コーナー")
         JtCor(xlApp)
         ' Dirt floor scissors
-        PubDVal(xlApp, "BA138", HdrDInp(vbTab & vbTab & "土間用さし: "))
+        PubDVal(xlApp, "BA139", HdrDInp(vbTab & vbTab & "土間用さし: "))
         ' U type
         PubDModVal(xlApp, "126", "（Ｕノ字型）", "900×80×900", 3.1, HdrDInp(vbTab & vbTab & "Ｕ型 (D16): "))
         ' Haunch
         Haunch(xlApp, HdrYNQ(vbTab & vbTab & "ハンチ (H250): "))
         ' End slab for deep foundation
-        PubDModVal(xlApp, "129", "650×250　　フック付", 0.6, HdrYNQ(vbTab & vbTab & "深基礎用端部スラブ (D10): "))
+        PubDModVal(xlApp, "129", "650×250　　フック付", 0.6, HdrDInp(vbTab & vbTab & "深基礎用端部スラブ (D10): "))
         ' Electric water heater
         ElecWtrHtr(xlApp, HdrDInp(vbTab & vbTab & "電気温水器: "))
         ' Parts

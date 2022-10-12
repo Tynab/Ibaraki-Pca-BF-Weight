@@ -8,10 +8,10 @@ Friend Module Util
     ''' <param name="choosen">Selection.</param>
     Friend Sub Fare(xlApp As Application, choosen As Double)
         If choosen = 1 Then
-            DctVal(xlApp, "BA158", choosen)
+            DctVal(xlApp, "BA159", choosen)
         End If
-        DctVal(xlApp, "BA109", 5)
-        DctVal(xlApp, "BA110", 3)
+        DctVal(xlApp, "BA109", 5) ' D13
+        DctVal(xlApp, "BA110", 3) ' D10
     End Sub
 
     ''' <summary>
@@ -21,16 +21,16 @@ Friend Module Util
     ''' <param name="choosen">Selection.</param>
     Friend Sub SlabHookType(xlApp As Application, choosen As Double)
         If choosen = 1 Then
-            PubDVal(xlApp, "BA36", DtlDInp(vbTab & "95×5405:"))
-            PubDVal(xlApp, "BA37", DtlDInp(vbTab & "95×4905:"))
-            PubDVal(xlApp, "BA38", DtlDInp(vbTab & "95×4405:"))
-            PubDVal(xlApp, "BA39", DtlDInp(vbTab & "95×3905:"))
-            PubDVal(xlApp, "BA40", DtlDInp(vbTab & "95×3405:"))
-            PubDVal(xlApp, "BA41", DtlDInp(vbTab & "95×2905:"))
-            PubDVal(xlApp, "BA42", DtlDInp(vbTab & "95×2405:"))
-            PubDVal(xlApp, "BA43", DtlDInp(vbTab & "95×1905:"))
-            PubDVal(xlApp, "BA44", DtlDInp(vbTab & "95×1405:"))
-            PubDVal(xlApp, "BA45", DtlDInp(vbTab & "95× 905:"))
+            PubDVal(xlApp, "BA36", DtlDInp(vbTab & "95×5405: "))
+            PubDVal(xlApp, "BA37", DtlDInp(vbTab & "95×4905: "))
+            PubDVal(xlApp, "BA38", DtlDInp(vbTab & "95×4405: "))
+            PubDVal(xlApp, "BA39", DtlDInp(vbTab & "95×3905: "))
+            PubDVal(xlApp, "BA40", DtlDInp(vbTab & "95×3405: "))
+            PubDVal(xlApp, "BA41", DtlDInp(vbTab & "95×2905: "))
+            PubDVal(xlApp, "BA42", DtlDInp(vbTab & "95×2405: "))
+            PubDVal(xlApp, "BA43", DtlDInp(vbTab & "95×1905: "))
+            PubDVal(xlApp, "BA44", DtlDInp(vbTab & "95×1405: "))
+            PubDVal(xlApp, "BA45", DtlDInp(vbTab & "95× 905: "))
         End If
     End Sub
 
@@ -61,18 +61,18 @@ Friend Module Util
     ''' <param name="choosen">Selection.</param>
     Friend Sub SlabStr(xlApp As Application, choosen As Double)
         If choosen = 1 Then
-            PubDVal(xlApp, "BA56", DtlDInp(vbTab & "5500" & vbTab & vbTab & ":"))
-            PubDVal(xlApp, "BA57", DtlDInp(vbTab & "5000" & vbTab & vbTab & ":"))
-            PubDVal(xlApp, "BA58", DtlDInp(vbTab & "4500" & vbTab & vbTab & ":"))
-            PubDVal(xlApp, "BA59", DtlDInp(vbTab & "4000" & vbTab & vbTab & ":"))
-            PubDVal(xlApp, "BA60", DtlDInp(vbTab & "3500" & vbTab & vbTab & ":"))
-            PubDVal(xlApp, "BA61", DtlDInp(vbTab & "3000" & vbTab & vbTab & ":"))
-            PubDVal(xlApp, "BA62", DtlDInp(vbTab & "2500" & vbTab & vbTab & ":"))
-            PubDVal(xlApp, "BA63", DtlDInp(vbTab & "2000" & vbTab & vbTab & ":"))
-            PubDVal(xlApp, "BA64", DtlDInp(vbTab & "1500" & vbTab & vbTab & ":"))
-            PubDModVal(xlApp, "65", "1300", 1.4, DtlDInpDesc(vbTab & "1300 ", "[1.4]" & vbTab))
-            PubDVal(xlApp, "BA66", DtlDInp(vbTab & "1000" & vbTab & vbTab & ":"))
-            PubDVal(xlApp, "BA67", DtlDInp(vbTab & " 900" & vbTab & vbTab & ":"))
+            PubDVal(xlApp, "BA56", DtlDInp(vbTab & "5500: "))
+            PubDVal(xlApp, "BA57", DtlDInp(vbTab & "5000: "))
+            PubDVal(xlApp, "BA58", DtlDInp(vbTab & "4500: "))
+            PubDVal(xlApp, "BA59", DtlDInp(vbTab & "4000: "))
+            PubDVal(xlApp, "BA60", DtlDInp(vbTab & "3500: "))
+            PubDVal(xlApp, "BA61", DtlDInp(vbTab & "3000: "))
+            PubDVal(xlApp, "BA62", DtlDInp(vbTab & "2500: "))
+            PubDVal(xlApp, "BA63", DtlDInp(vbTab & "2000: "))
+            PubDVal(xlApp, "BA64", DtlDInp(vbTab & "1500: "))
+            PubDModVal(xlApp, "65", "1300", 1.4, DtlDInp(vbTab & "1300: "))
+            PubDVal(xlApp, "BA66", DtlDInp(vbTab & "1000: "))
+            PubDVal(xlApp, "BA67", DtlDInp(vbTab & " 900: "))
         End If
     End Sub
 
@@ -83,16 +83,16 @@ Friend Module Util
     ''' <param name="choosen">Selection.</param>
     Friend Sub SlabReinfHookType(xlApp As Application, choosen As Double)
         If choosen = 1 Then
-            PubDModVal(xlApp, "68", "95×5405", 3.2, DtlDInpDesc(vbTab & "95×5405 ", "[3.2]"))
-            PubDModVal(xlApp, "69", "95×4905", 2.9, DtlDInpDesc(vbTab & "95×4905 ", "[2.9]"))
-            PubDModVal(xlApp, "70", "95×4405", 2.6, DtlDInpDesc(vbTab & "95×4405 ", "[2.6]"))
-            PubDModVal(xlApp, "71", "95×3905", 2.4, DtlDInpDesc(vbTab & "95×3905 ", "[2.4]"))
-            PubDModVal(xlApp, "72", "95×3405", 2.1, DtlDInpDesc(vbTab & "95×3405 ", "[2.1]"))
-            PubDModVal(xlApp, "73", "95×2905", 1.8, DtlDInpDesc(vbTab & "95×2905 ", "[1.8]"))
-            PubDModVal(xlApp, "74", "95×2405", 1.5, DtlDInpDesc(vbTab & "95×2405 ", "[1.5]"))
-            PubDModVal(xlApp, "75", "95×1905", 1.2, DtlDInpDesc(vbTab & "95×1905 ", "[1.2]"))
-            PubDModVal(xlApp, "76", "95×1405", 0.9, DtlDInpDesc(vbTab & "95×1405 ", "[0.9]"))
-            PubDModVal(xlApp, "77", "95× 905", 0.6, DtlDInpDesc(vbTab & "95× 905 ", "[0.6]"))
+            PubDModVal(xlApp, "68", "95×5405", 3.2, DtlDInp(vbTab & "95×5405: "))
+            PubDModVal(xlApp, "69", "95×4905", 2.9, DtlDInp(vbTab & "95×4905: "))
+            PubDModVal(xlApp, "70", "95×4405", 2.6, DtlDInp(vbTab & "95×4405: "))
+            PubDModVal(xlApp, "71", "95×3905", 2.4, DtlDInp(vbTab & "95×3905: "))
+            PubDModVal(xlApp, "72", "95×3405", 2.1, DtlDInp(vbTab & "95×3405: "))
+            PubDModVal(xlApp, "73", "95×2905", 1.8, DtlDInp(vbTab & "95×2905: "))
+            PubDModVal(xlApp, "74", "95×2405", 1.5, DtlDInp(vbTab & "95×2405: "))
+            PubDModVal(xlApp, "75", "95×1905", 1.2, DtlDInp(vbTab & "95×1905: "))
+            PubDModVal(xlApp, "76", "95×1405", 0.9, DtlDInp(vbTab & "95×1405: "))
+            PubDModVal(xlApp, "77", "95× 905", 0.6, DtlDInp(vbTab & "95× 905: "))
         End If
     End Sub
 
@@ -103,16 +103,16 @@ Friend Module Util
     ''' <param name="choosen">Selection.</param>
     Friend Sub SlabReinfStr(xlApp As Application, choosen As Double)
         If choosen = 1 Then
-            PubDVal(xlApp, "BA78", DtlDInp(vbTab & "5500:"))
-            PubDVal(xlApp, "BA79", DtlDInp(vbTab & "5000:"))
-            PubDVal(xlApp, "BA80", DtlDInp(vbTab & "4500:"))
-            PubDVal(xlApp, "BA81", DtlDInp(vbTab & "4000:"))
-            PubDVal(xlApp, "BA82", DtlDInp(vbTab & "3500:"))
-            PubDVal(xlApp, "BA83", DtlDInp(vbTab & "3000:"))
-            PubDVal(xlApp, "BA84", DtlDInp(vbTab & "2500:"))
-            PubDVal(xlApp, "BA85", DtlDInp(vbTab & "2000:"))
-            PubDVal(xlApp, "BA86", DtlDInp(vbTab & "1500:"))
-            PubDVal(xlApp, "BA87", DtlDInp(vbTab & "1000:"))
+            PubDVal(xlApp, "BA78", DtlDInp(vbTab & "5500: "))
+            PubDVal(xlApp, "BA79", DtlDInp(vbTab & "5000: "))
+            PubDVal(xlApp, "BA80", DtlDInp(vbTab & "4500: "))
+            PubDVal(xlApp, "BA81", DtlDInp(vbTab & "4000: "))
+            PubDVal(xlApp, "BA82", DtlDInp(vbTab & "3500: "))
+            PubDVal(xlApp, "BA83", DtlDInp(vbTab & "3000: "))
+            PubDVal(xlApp, "BA84", DtlDInp(vbTab & "2500: "))
+            PubDVal(xlApp, "BA85", DtlDInp(vbTab & "2000: "))
+            PubDVal(xlApp, "BA86", DtlDInp(vbTab & "1500: "))
+            PubDVal(xlApp, "BA87", DtlDInp(vbTab & "1000: "))
         End If
     End Sub
 
@@ -121,17 +121,17 @@ Friend Module Util
     ''' </summary>
     ''' <param name="xlApp">Excel Application.</param>
     Friend Sub LwrEndD13(xlApp As Application)
-        PubDVal(xlApp, "BA111", DtlDInp(vbTab & "    5500" & vbTab & ": "))
-        PubDVal(xlApp, "BA112", DtlDInp(vbTab & "    5000" & vbTab & ": "))
-        PubDVal(xlApp, "BA113", DtlDInp(vbTab & "    4500" & vbTab & ": "))
-        PubDVal(xlApp, "BA114", DtlDInp(vbTab & "    4000" & vbTab & ": "))
-        PubDVal(xlApp, "BA115", DtlDInp(vbTab & "    3500" & vbTab & ": "))
-        PubDVal(xlApp, "BA116", DtlDInp(vbTab & "    3000" & vbTab & ": "))
-        PubDVal(xlApp, "BA117", DtlDInp(vbTab & "    2500" & vbTab & ": "))
-        PubDVal(xlApp, "BA118", DtlDInp(vbTab & "    2000" & vbTab & ": "))
-        PubDVal(xlApp, "BA119", DtlDInp(vbTab & "    1500" & vbTab & ": "))
-        PubDVal(xlApp, "BA120", DtlDInp(vbTab & "    1000" & vbTab & ": "))
-        PubDModVal(xlApp, "121", "D13", "（下部主筋）", "750×1250", 2.1, DtlDInpDesc(vbTab & "750×1250 ", "[2.1]" & vbTab))
+        PubDVal(xlApp, "BA111", DtlDInp(vbTab & "    5500: "))
+        PubDVal(xlApp, "BA112", DtlDInp(vbTab & "    5000: "))
+        PubDVal(xlApp, "BA113", DtlDInp(vbTab & "    4500: "))
+        PubDVal(xlApp, "BA114", DtlDInp(vbTab & "    4000: "))
+        PubDVal(xlApp, "BA115", DtlDInp(vbTab & "    3500: "))
+        PubDVal(xlApp, "BA116", DtlDInp(vbTab & "    3000: "))
+        PubDVal(xlApp, "BA117", DtlDInp(vbTab & "    2500: "))
+        PubDVal(xlApp, "BA118", DtlDInp(vbTab & "    2000: "))
+        PubDVal(xlApp, "BA119", DtlDInp(vbTab & "    1500: "))
+        PubDVal(xlApp, "BA120", DtlDInp(vbTab & "    1000: "))
+        PubDModVal(xlApp, "121", "D13", "（下部主筋）", "750×1250", 2.1, DtlDInp(vbTab & "750×1250: "))
     End Sub
 
     ''' <summary>
@@ -141,16 +141,16 @@ Friend Module Util
     ''' <param name="choosen">Selection.</param>
     Friend Sub LwrEndD16(xlApp As Application, choosen As Double)
         If choosen = 1 Then
-            PubDModVal(xlApp, "98", "D16", "（下部主筋　直筋）", "5500", 8.6, My.Settings.Pr_D16, DtlDInpDesc(vbTab & "5500 ", "[8.6]" & vbTab))
-            PubDModVal(xlApp, "99", "D16", "（下部主筋　直筋）", "5000", 7.8, My.Settings.Pr_D16, DtlDInpDesc(vbTab & "5000 ", "[7.8]" & vbTab))
-            PubDModVal(xlApp, "100", "D16", "（下部主筋　直筋）", "4500", 7.1, My.Settings.Pr_D16, DtlDInpDesc(vbTab & "4500 ", "[7.1]" & vbTab))
-            PubDModVal(xlApp, "101", "D16", "（下部主筋　直筋）", "4000", 6.3, My.Settings.Pr_D16, DtlDInpDesc(vbTab & "4000 ", "[6.3]" & vbTab))
-            PubDModVal(xlApp, "102", "D16", "（下部主筋　直筋）", "3500", 5.5, My.Settings.Pr_D16, DtlDInpDesc(vbTab & "3500 ", "[5.5]" & vbTab))
-            PubDModVal(xlApp, "103", "D16", "（下部主筋　直筋）", "3000", 4.9, DtlDInpDesc(vbTab & "3000 ", "[4.9]" & vbTab))
-            PubDModVal(xlApp, "104", "D16", "（下部主筋　直筋）", "2500", 4.1, DtlDInpDesc(vbTab & "2500 ", "[4.1]" & vbTab))
-            PubDModVal(xlApp, "105", "D16", "（下部主筋　直筋）", "2000", 3.3, DtlDInpDesc(vbTab & "2000 ", "[3.3]" & vbTab))
-            PubDModVal(xlApp, "106", "D16", "（下部主筋　直筋）", "1500", 2.5, DtlDInpDesc(vbTab & "1500 ", "[2.5]" & vbTab))
-            PubDModVal(xlApp, "107", "D16", "（下部主筋　直筋）", "1000", 1.7, DtlDInpDesc(vbTab & "1000 ", "[1.7]" & vbTab))
+            PubDModVal(xlApp, "98", "D16", "（下部主筋　直筋）", "5500", 8.6, My.Settings.Pr_D16, DtlDInp(vbTab & "5500: "))
+            PubDModVal(xlApp, "99", "D16", "（下部主筋　直筋）", "5000", 7.8, My.Settings.Pr_D16, DtlDInp(vbTab & "5000: "))
+            PubDModVal(xlApp, "100", "D16", "（下部主筋　直筋）", "4500", 7.1, My.Settings.Pr_D16, DtlDInp(vbTab & "4500: "))
+            PubDModVal(xlApp, "101", "D16", "（下部主筋　直筋）", "4000", 6.3, My.Settings.Pr_D16, DtlDInp(vbTab & "4000: "))
+            PubDModVal(xlApp, "102", "D16", "（下部主筋　直筋）", "3500", 5.5, My.Settings.Pr_D16, DtlDInp(vbTab & "3500: "))
+            PubDModVal(xlApp, "103", "D16", "（下部主筋　直筋）", "3000", 4.9, DtlDInp(vbTab & "3000: "))
+            PubDModVal(xlApp, "104", "D16", "（下部主筋　直筋）", "2500", 4.1, DtlDInp(vbTab & "2500: "))
+            PubDModVal(xlApp, "105", "D16", "（下部主筋　直筋）", "2000", 3.3, DtlDInp(vbTab & "2000: "))
+            PubDModVal(xlApp, "106", "D16", "（下部主筋　直筋）", "1500", 2.5, DtlDInp(vbTab & "1500: "))
+            PubDModVal(xlApp, "107", "D16", "（下部主筋　直筋）", "1000", 1.7, DtlDInp(vbTab & "1000: "))
         End If
     End Sub
 
@@ -191,7 +191,7 @@ Friend Module Util
     ''' </summary>
     ''' <param name="xlApp">Excel Application.</param>
     Friend Sub JtCor(xlApp As Application)
-        PubDModVal(xlApp, "122", "D16", "（コーナー）", "900×900", 2.9, DtlDInpDesc(vbTab & "D16 ", "[2.9]" & vbTab))
+        PubDModVal(xlApp, "122", "D16", "（コーナー）", "900×900", 2.9, DtlDInp(vbTab & "D16: "))
         PubDVal(xlApp, "BA124", DtlDInp(vbTab & "D13: "))
         PubDVal(xlApp, "BA123", DtlDInp(vbTab & "D10: "))
     End Sub
@@ -203,8 +203,8 @@ Friend Module Util
     ''' <param name="choosen">Selection.</param>
     Friend Sub Haunch(xlApp As Application, choosen As Double)
         If choosen = 1 Then
-            PubDModVal(xlApp, "127", "900×曲（H250）×900", 3.5, DtlDInpDesc(vbTab & "D16 ", "[3.5]" & vbTab))
-            PubDModVal(xlApp, "128", "D13", "750×曲（H250）×750", 2, DtlDInpDesc(vbTab & "D13 ", "[2.0]" & vbTab))
+            PubDModVal(xlApp, "127", "900×曲（H250）×900", 3.5, DtlDInp(vbTab & "D16: "))
+            PubDModVal(xlApp, "128", "D13", "750×曲（H250）×750", 2, DtlDInp(vbTab & "D13: "))
         End If
     End Sub
 
@@ -226,37 +226,36 @@ Friend Module Util
     ''' </summary>
     ''' <param name="xlApp">Excel Application.</param>
     Friend Sub Parts(xlApp As Application)
-        Dim name = $"{DtlSInp(vbTab & "邸名" & vbTab & vbTab & vbTab & vbTab & vbTab & vbTab & vbTab & vbTab & vbTab & ": ")}様邸"
+        Dim name = $"{DtlSInp(vbTab & "邸名" & vbTab & vbTab & vbTab & vbTab & vbTab & vbTab & vbTab & vbTab & ": ")}様邸"
         DctVal(xlApp, "BJ13", name)
         CType(xlApp.ActiveSheet, Worksheet).Name = name
-        PubSVal(xlApp, vbTab & "邸名コード" & vbTab & vbTab & vbTab & vbTab & vbTab & vbTab & vbTab & vbTab & ": ", "AD6")
-        PubSVal(xlApp, vbTab & "納品日" & vbTab & vbTab & vbTab & vbTab & vbTab & vbTab & vbTab & vbTab & vbTab & ": ", "BO3")
-        PubSVal(xlApp, vbTab & "住所" & vbTab & vbTab & vbTab & vbTab & vbTab & vbTab & vbTab & vbTab & vbTab & ": ", "BJ14")
-        PubDVal(xlApp, "BA149", DtlDInpDesc(vbTab & "カットスクリュー・Ⅱ (袋)", vbTab & vbTab & vbTab & "[M12ﾖｳ 50ｺｲﾘ]:" & vbTab & vbTab))
-        PubDVal(xlApp, "BA141", DtlDInpDesc(vbTab & "PCa基礎梁 敷き鉄板 (枚)", vbTab & vbTab & vbTab & vbTab & "[1.6t×200×300]:" & vbTab))
-        PubDVal(xlApp, "BA142", DtlDInpDesc(vbTab & "PCa基礎梁 敷き鉄板 (枚)", vbTab & vbTab & vbTab & vbTab & "[3.2t×200×300]:" & vbTab))
-        PubDVal(xlApp, "BA143", DtlDInpDesc(vbTab & "PCa基礎梁 土台用アンカー (本)", vbTab & vbTab & vbTab & "[M12×147]:" & vbTab & vbTab))
-        PubDVal(xlApp, "BA144", DtlDInpDesc(vbTab & "PCa基礎梁 ホールダウンカンカーボルト (本)", vbTab & "[M12×387]:" & vbTab & vbTab))
-        PubDVal(xlApp, "BA146", DtlDInpDesc(vbTab & "PCa基礎梁 ホールダウンカンカーボルト (本)", vbTab & "[M12×170]:" & vbTab & vbTab))
-        PubDVal(xlApp, "BA153", DtlDInpDesc(vbTab & "マグネット差筋アンカーD13 (ｾｯﾄ)", vbTab & vbTab & "[直]:" & vbTab & vbTab & vbTab))
-        PubDVal(xlApp, "BA154", DtlDInpDesc(vbTab & "マグネット差筋アンカーD13 (ｾｯﾄ)", vbTab & vbTab & "[曲]:" & vbTab & vbTab & vbTab))
-        PubDVal(xlApp, "BA151", DtlDInpDesc(vbTab & "排水用スリーブホルダー・D10用 (箱)", vbTab & vbTab & "[50ﾊﾟｲ 75ﾊﾟｲ]:" & vbTab & vbTab))
-        PubDVal(xlApp, "BA150", DtlDInpDesc(vbTab & "給水用スリーブホルダー・D10用 (箱)", vbTab & vbTab & "[50ﾊﾟｲ]:" & vbTab & vbTab))
-        PubDVal(xlApp, "BA145", DtlDInpDesc(vbTab & "PCa基礎梁 BF用柱脚両ネジボルト (本)", vbTab & vbTab & "[M16×70]:" & vbTab & vbTab))
-        Dim curingShRingTree = DtlDInpDesc(vbTab & "養生シート輪木 (ｾｯﾄ)", vbTab & vbTab & vbTab & vbTab & "[3.6×5.4]" & vbTab & vbTab)
+        PubSVal(xlApp, vbTab & "邸名コード" & vbTab & vbTab & vbTab & vbTab & vbTab & vbTab & vbTab & ": ", "AD6")
+        PubSVal(xlApp, vbTab & "納品日" & vbTab & vbTab & vbTab & vbTab & vbTab & vbTab & vbTab & vbTab & ": ", "BO3")
+        PubSVal(xlApp, vbTab & "住所" & vbTab & vbTab & vbTab & vbTab & vbTab & vbTab & vbTab & vbTab & ": ", "BJ14")
+        PubDVal(xlApp, "BA150", DtlDInpDesc(vbTab & "カットスクリュー・Ⅱ (袋)", vbTab & vbTab & vbTab & "[M12ﾖｳ 50ｺｲﾘ]" & vbTab))
+        PubDVal(xlApp, "BA142", DtlDInpDesc(vbTab & "PCa基礎梁 敷き鉄板 (枚)", vbTab & vbTab & vbTab & vbTab & "[1.6t×200×300]" & vbTab))
+        PubDVal(xlApp, "BA143", DtlDInpDesc(vbTab & "PCa基礎梁 敷き鉄板 (枚)", vbTab & vbTab & vbTab & vbTab & "[3.2t×200×300]" & vbTab))
+        PubDVal(xlApp, "BA144", DtlDInpDesc(vbTab & "PCa基礎梁 土台用アンカー (本)", vbTab & vbTab & vbTab & "[M12×147]" & vbTab))
+        PubDVal(xlApp, "BA145", DtlDInpDesc(vbTab & "PCa基礎梁 ホールダウンカンカーボルト (本)", vbTab & "[M12×387]" & vbTab))
+        PubDVal(xlApp, "BA147", DtlDInpDesc(vbTab & "PCa基礎梁 ホールダウンカンカーボルト (本)", vbTab & "[M12×170]" & vbTab))
+        PubDVal(xlApp, "BA154", DtlDInpDesc(vbTab & "マグネット差筋アンカーD13 (ｾｯﾄ)", vbTab & vbTab & vbTab & "[直]" & vbTab & vbTab))
+        PubDVal(xlApp, "BA155", DtlDInpDesc(vbTab & "マグネット差筋アンカーD13 (ｾｯﾄ)", vbTab & vbTab & vbTab & "[曲]" & vbTab & vbTab))
+        PubDVal(xlApp, "BA152", DtlDInpDesc(vbTab & "排水用スリーブホルダー・D10用 (箱)", vbTab & vbTab & "[50ﾊﾟｲ 75ﾊﾟｲ]" & vbTab))
+        PubDVal(xlApp, "BA151", DtlDInpDesc(vbTab & "給水用スリーブホルダー・D10用 (箱)", vbTab & vbTab & "[50ﾊﾟｲ]" & vbTab & vbTab))
+        PubDVal(xlApp, "BA146", DtlDInpDesc(vbTab & "PCa基礎梁 BF用柱脚両ネジボルト (本)", vbTab & vbTab & "[M16×70]" & vbTab))
+        Dim curingShRingTree = DtlDInpDesc(vbTab & "養生シート輪木 (ｾｯﾄ)", vbTab & vbTab & vbTab & vbTab & "[3.6×5.4]" & vbTab)
         If curingShRingTree > 0 Then
-            DctVal(xlApp, "BA155", curingShRingTree)
+            DctVal(xlApp, "BA156", curingShRingTree)
         Else
-            DctVal(xlApp, "BA155", 1)
-            ClrVal(xlApp, "BF155")
-            ClrVal(xlApp, "CB155")
+            DctVal(xlApp, "BA156", 1)
+            ClrVal(xlApp, "BF156")
+            ClrVal(xlApp, "CB156")
         End If
-        PubDVal(xlApp, "BA156", DtlDInp(vbTab & "カットスクリューⅡ・専用ピット (個):" & vbTab & vbTab & vbTab & vbTab & vbTab & ": "))
-        PubDVal(xlApp, "BAcc", DtlDInpDesc(vbTab & "スペーサーブロック (個)", vbTab & vbTab & vbTab & vbTab & "[H60・70・80]:" & vbTab & vbTab))
-        PubDVal(xlApp, "BA148", DtlDInpDesc(vbTab & "スペーサーブロック (個)", vbTab & vbTab & vbTab & vbTab & "[H80]:" & vbTab & vbTab))
-        'PubDVal(xlApp, "BA145", DtlDInpDesc(vbTab & "結束線メッキ450 (ｹｰｽ)", vbTab & vbTab & vbTab & vbTab & "[20kg]" & vbTab & vbTab & vbTab))
-        'PubDVal(xlApp, "BA150", DtlDInpDesc(vbTab & "Ｕボルト (ｾｯﾄ)", vbTab & vbTab & vbTab & vbTab & vbTab & "[M8]" & vbTab & vbTab & vbTab))
+        PubDVal(xlApp, "BA157", DtlDInp(vbTab & "カットスクリューⅡ・専用ピット (個)" & vbTab & vbTab & vbTab & vbTab & ": "))
+        PubDVal(xlApp, "BA148", DtlDInpDesc(vbTab & "スペーサーブロック (個)", vbTab & vbTab & vbTab & vbTab & "[H60]" & vbTab & vbTab))
+        PubDVal(xlApp, "BA149", DtlDInpDesc(vbTab & "スペーサーブロック (個)", vbTab & vbTab & vbTab & vbTab & "[H80]" & vbTab & vbTab))
         ' Extend
-        'PubDVal(xlApp, "BA148", DtlDInpDesc(vbTab & "樹脂スペーサー (個)", vbTab & vbTab & vbTab & vbTab & "[70×80 50ｺ/ﾊｺ]" & vbTab & vbTab))
+        PubDVal(xlApp, "BA153", DtlDInpDesc(vbTab & "アンカーボルトセット (ｾｯﾄ)", vbTab & vbTab & vbTab & "[M18×380]" & vbTab))
+        PubDVal(xlApp, "BA158", DtlDInpDesc(vbTab & "Ｕボルト (ｾｯﾄ)", vbTab & vbTab & vbTab & vbTab & vbTab & "[M8]" & vbTab & vbTab))
     End Sub
 End Module

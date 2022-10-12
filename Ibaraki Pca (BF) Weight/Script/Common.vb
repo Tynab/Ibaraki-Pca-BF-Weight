@@ -241,24 +241,6 @@ Friend Module Common
     End Sub
 
     ''' <summary>
-    ''' Publish double mod value expansion to excel.
-    ''' </summary>
-    ''' <param name="xlApp">Excel application.</param>
-    ''' <param name="row">Row number.</param>
-    ''' <param name="name">Name rebar.</param>
-    ''' <param name="weight">Weight rebar.</param>
-    ''' <param name="price">Price rebar.</param>
-    ''' <param name="number">Number rebar.</param>
-    Friend Sub PubDModVal(xlApp As Microsoft.Office.Interop.Excel.Application, row As String, name As String, weight As Double, price As Double, number As Double)
-        If number > 0 Then
-            DctVal(xlApp, $"AH{row}", name)
-            ModVal(xlApp, $"CM{row}", weight)
-            ModVal(xlApp, $"CQ{row}", price)
-            DctVal(xlApp, $"BA{row}", number)
-        End If
-    End Sub
-
-    ''' <summary>
     ''' Publish double mod value to excel.
     ''' </summary>
     ''' <param name="xlApp">Excel application.</param>

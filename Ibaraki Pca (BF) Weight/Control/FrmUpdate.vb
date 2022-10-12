@@ -8,6 +8,22 @@ Public Class FrmUpdate
     Private ReadOnly _wc As New WebClient
 #End Region
 
+#Region "Overridden"
+    ' Hide sub window
+    Protected Overrides ReadOnly Property CreateParams() As CreateParams
+        Get
+            Dim cp As CreateParams = MyBase.CreateParams
+            cp.ExStyle = cp.ExStyle Or &H80
+            Return cp
+        End Get
+    End Property
+
+    ' Deny Alt+F4
+    Protected Overrides Function ProcessCmdKey(ByRef msg As Message, keyData As Keys) As Boolean
+        Return keyData = (Keys.Alt Or Keys.F4) OrElse MyBase.ProcessCmdKey(msg, keyData)
+    End Function
+#End Region
+
 #Region "Events"
     ' Form shown
     Private Sub FrmUpdate_Shown(sender As Object, e As EventArgs) Handles MyBase.Shown
