@@ -1,5 +1,4 @@
 ﻿Imports System.Console
-Imports System.ConsoleColor
 Imports System.Text.Encoding
 
 Public Module ModuleMain
@@ -13,8 +12,7 @@ Public Module ModuleMain
                 UpdVldLic()
                 RunApp()
             Else
-                ForegroundColor = Red
-                Write("ライセンスが間違っています。 終了するには、任意のキーを押してください...")
+                ErrSty("ライセンスが間違っています。 終了するには、任意のキーを押してください...")
                 ReadKey()
             End If
         Else

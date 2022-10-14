@@ -34,8 +34,7 @@ Friend Module Common
     ''' Check update.
     ''' </summary>
     Private Sub ChkUpd()
-        ForegroundColor = DarkYellow
-        Write("アップデートの確認...")
+        HdrSty("アップデートの確認...")
         If IsNetAvail() AndAlso Not (New WebClient).DownloadString(My.Resources.link_ver).Contains(My.Resources.app_ver) Then
             Show($"「{My.Resources.app_true_name}」新しいバージョンが利用可能！", "更新", OK, Information)
             Run(New FrmUpdate)
@@ -92,8 +91,8 @@ Friend Module Common
     ''' Kill excel.
     ''' </summary>
     Private Sub KillXl()
-        ForegroundColor = Yellow
-        Write("警告：このアプリケーションを使用する前に、すべての「エクセル」を閉じてください。「エンター」キーを押して続行します...")
+        Clear()
+        HdrSty("警告：このアプリケーションを使用する前に、すべての「エクセル」を閉じてください。「エンター」キーを押して続行します...")
         ReadLine()
         KillPrcs(XL_NAME)
     End Sub
@@ -147,14 +146,10 @@ Friend Module Common
     ''' <param name="caption">Caption.</param>
     ''' <returns>Answer value.</returns>
     Friend Function HdrYNQ(caption As String)
-        HdrWarnDesc(caption)
-        ForegroundColor = White
-        Dim value = Val(ReadLine)
+        Dim value = HdrDWrng(caption)
         If value <> 0 Or value <> 1 Then
             Do Until value = 0 Or value = 1
-                HdrWarnDesc(caption)
-                ForegroundColor = Red
-                value = Val(ReadLine)
+                value = HdrDErr(caption)
             Loop
         End If
         Return value
@@ -316,87 +311,113 @@ Friend Module Common
 
 #Region "Actor"
     ''' <summary>
-    ''' Intro.
+    ''' Header style.
     ''' </summary>
-    Private Sub Intro()
-        Clear()
-        ForegroundColor = Blue
-        WriteLine(My.Resources.gr_name)
-        WriteLine(My.Resources.cc_text)
-        ForegroundColor = Green
-        WriteLine(vbCrLf & My.Resources.app_true_name & vbCrLf)
+    ''' <param name="caption">Caption.</param>
+    Private Sub HdrSty(caption As String)
+        ForegroundColor = DarkYellow
+        Write(caption)
     End Sub
 
     ''' <summary>
-    ''' Title warning.
+    ''' Intro style.
     ''' </summary>
     ''' <param name="caption">Caption.</param>
-    Private Sub TitWarn(caption As String)
+    Private Sub IntroSty(caption As String)
+        ForegroundColor = Blue
+        Write(caption)
+    End Sub
+
+    ''' <summary>
+    ''' Title style.
+    ''' </summary>
+    ''' <param name="caption">Caption.</param>
+    Private Sub TitSty(caption As String)
+        ForegroundColor = Green
+        Write(caption)
+    End Sub
+
+    ''' <summary>
+    ''' Input style.
+    ''' </summary>
+    ''' <param name="caption">Caption.</param>
+    Private Sub InpSty(caption As String)
+        ForegroundColor = Cyan
+        Write(caption)
+    End Sub
+
+    ''' <summary>
+    ''' Description style.
+    ''' </summary>
+    ''' <param name="caption">Caption.</param>
+    Private Sub DescSty(caption As String)
+        ForegroundColor = Magenta
+        Write(caption)
+    End Sub
+
+    ''' <summary>
+    ''' Warning style.
+    ''' </summary>
+    ''' <param name="caption">Caption.</param>
+    Private Sub WrngSty(caption As String)
         ForegroundColor = Yellow
         Write(caption)
     End Sub
 
     ''' <summary>
-    ''' Title info.
+    ''' Error style.
     ''' </summary>
     ''' <param name="caption">Caption.</param>
-    Private Sub TitInfo(caption As String)
-        ForegroundColor = Cyan
+    Friend Sub ErrSty(caption As String)
+        ForegroundColor = Red
         Write(caption)
     End Sub
 
     ''' <summary>
-    ''' Title info desciption.
+    ''' Prefix input.
     ''' </summary>
-    ''' <param name="description">Description.</param>
-    Private Sub TitDecs(description As String)
-        ForegroundColor = Magenta
-        Write(description)
-        ForegroundColor = Cyan
-        Write(": ")
+    ''' <param name="caption">Caption.</param>
+    Private Sub PrefInp(caption As String)
+        InpSty(caption)
         ForegroundColor = White
     End Sub
 
     ''' <summary>
-    ''' Title info expansion.
+    ''' Prefix select.
     ''' </summary>
     ''' <param name="caption">Caption.</param>
-    Private Sub TitInfoExp(caption As String)
-        TitInfo(caption)
+    Private Sub PrefSel(caption As String)
+        WrngSty(caption)
         ForegroundColor = White
     End Sub
 
     ''' <summary>
-    ''' Detail double input.
+    ''' Prefix warning.
     ''' </summary>
     ''' <param name="caption">Caption.</param>
-    ''' <returns>Input value.</returns>
-    Friend Function DtlDInp(caption As String)
-        TitInfoExp(caption)
-        Return Val(ReadLine)
-    End Function
+    Private Sub PrefWrng(caption As String)
+        WrngSty(caption)
+        ForegroundColor = Red
+    End Sub
 
     ''' <summary>
-    ''' Detail string input.
+    ''' Suffix description.
     ''' </summary>
-    ''' <param name="caption">Caption.</param>
-    ''' <returns>Input value.</returns>
-    Friend Function DtlSInp(caption As String)
-        TitInfoExp(caption)
-        Return ReadLine.ToString()
-    End Function
-
-    ''' <summary>
-    ''' Detail double input description.
-    ''' </summary>
-    ''' <param name="caption">Caption.</param>
     ''' <param name="description">Description.</param>
-    ''' <returns>Input value.</returns>
-    Friend Function DtlDInpDesc(caption As String, description As String)
-        TitInfo(caption)
-        TitDecs(description)
-        Return Val(ReadLine)
-    End Function
+    Private Sub SfxDesc(description As String)
+        DescSty(description)
+        PrefInp(": ")
+    End Sub
+
+    ''' <summary>
+    ''' Intro.
+    ''' </summary>
+    Private Sub Intro()
+        Clear()
+        IntroSty(My.Resources.gr_name & vbCrLf)
+        IntroSty(My.Resources.cc_text & vbCrLf)
+        TitSty(vbCrLf & My.Resources.app_true_name & vbCrLf & vbCrLf)
+    End Sub
 
     ''' <summary>
     ''' Header double input.
@@ -409,22 +430,64 @@ Friend Module Common
     End Function
 
     ''' <summary>
-    ''' Header string warning description.
+    ''' Header string warning.
     ''' </summary>
     ''' <param name="caption">Caption.</param>
-    Private Sub HdrWarnDesc(caption As String)
+    Friend Sub HdrWrng(caption As String)
         Intro()
-        TitWarn(caption)
+        WrngSty(caption)
     End Sub
 
     ''' <summary>
-    ''' Prefix warning.
+    ''' Header double warning.
     ''' </summary>
     ''' <param name="caption">Caption.</param>
-    Friend Sub PrefWarn(caption As String)
+    Friend Function HdrDWrng(caption As String)
         Intro()
-        ForegroundColor = Yellow
-        WriteLine(caption)
-    End Sub
+        PrefSel(caption)
+        Return Val(ReadLine)
+    End Function
+
+    ''' <summary>
+    ''' Header double error.
+    ''' </summary>
+    ''' <param name="caption">Caption.</param>
+    Friend Function HdrDErr(caption As String)
+        Intro()
+        PrefWrng(caption)
+        Return Val(ReadLine)
+    End Function
+
+    ''' <summary>
+    ''' Detail double input.
+    ''' </summary>
+    ''' <param name="caption">Caption.</param>
+    ''' <returns>Input value.</returns>
+    Friend Function DtlDInp(caption As String)
+        PrefInp(caption)
+        Return Val(ReadLine)
+    End Function
+
+    ''' <summary>
+    ''' Detail string input.
+    ''' </summary>
+    ''' <param name="caption">Caption.</param>
+    ''' <returns>Input value.</returns>
+    Friend Function DtlSInp(caption As String)
+        PrefInp(caption)
+        Return ReadLine.ToString()
+    End Function
+
+    ''' <summary>
+    ''' Detail double input description.
+    ''' </summary>
+    ''' <param name="caption">Caption.</param>
+    ''' <param name="description">Description.</param>
+    ''' <returns>Input value.</returns>
+    Friend Function DtlDInpDesc(caption As String, description As String)
+        InpSty(caption)
+        SfxDesc(description)
+        Return Val(ReadLine)
+    End Function
 #End Region
 End Module

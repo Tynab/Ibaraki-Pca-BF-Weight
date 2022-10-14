@@ -19,7 +19,7 @@ Friend Module Service
         ' Slab reinforcement straight
         SlabReinfStr(xlApp, HdrYNQ(vbTab & vbTab & "スラブ補強直 (D10): "))
         ' Lower end d13
-        PrefWarn(vbTab & vbTab & "下端 (D13)")
+        HdrWrng(vbTab & vbTab & "下端 (D13)" & vbCrLf)
         LwrEndD13(xlApp)
         ' Lower end d16
         LwrEndD16(xlApp, HdrYNQ(vbTab & vbTab & "下端 (D16): "))
@@ -28,7 +28,7 @@ Friend Module Service
         ' Sleeve
         Sleeve(xlApp, HdrDInp(vbTab & vbTab & "スリーブ: "))
         ' Corner joint
-        PrefWarn(vbTab & vbTab & "コーナー")
+        HdrWrng(vbTab & vbTab & "コーナー" & vbCrLf)
         JtCor(xlApp)
         ' Dirt floor scissors
         PubDVal(xlApp, "BA139", HdrDInp(vbTab & vbTab & "土間用さし: "))
@@ -41,7 +41,7 @@ Friend Module Service
         ' Electric water heater
         ElecWtrHtr(xlApp, HdrDInp(vbTab & vbTab & "電気温水器: "))
         ' Parts
-        PrefWarn(vbTab & vbTab & "副資材リスト")
+        HdrWrng(vbTab & vbTab & "副資材リスト" & vbCrLf)
         Parts(xlApp)
     End Sub
 End Module
