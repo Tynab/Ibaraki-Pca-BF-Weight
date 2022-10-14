@@ -2,6 +2,7 @@
 Imports System.Math
 Imports System.Net
 Imports System.Windows.Forms
+Imports System.Windows.Forms.Keys
 
 Public Class FrmUpdate
 #Region "Fields"
@@ -20,7 +21,7 @@ Public Class FrmUpdate
 
     ' Deny Alt+F4
     Protected Overrides Function ProcessCmdKey(ByRef msg As Message, keyData As Keys) As Boolean
-        Return keyData = (Keys.Alt Or Keys.F4) OrElse MyBase.ProcessCmdKey(msg, keyData)
+        Return keyData = (Alt Or F4) OrElse MyBase.ProcessCmdKey(msg, keyData)
     End Function
 #End Region
 
@@ -55,16 +56,7 @@ Public Class FrmUpdate
 
     ' Form closing
     Private Sub FrmUpdate_FormClosing(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing
-        If GetProcessesByName(My.Resources.app_name).Count > 0 Then
-            For Each item In GetProcessesByName(My.Resources.app_name)
-                item.Kill()
-            Next
-        End If
-        If GetProcessesByName(XL_NAME).Count > 0 Then
-            For Each item In GetProcessesByName(XL_NAME)
-                item.Kill()
-            Next
-        End If
+        KillPrcs(My.Resources.app_name)
     End Sub
 #End Region
 End Class

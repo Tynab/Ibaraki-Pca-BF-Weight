@@ -34,6 +34,8 @@ Friend Module Common
     ''' Check update.
     ''' </summary>
     Private Sub ChkUpd()
+        ForegroundColor = DarkYellow
+        Write("アップデートの確認...")
         If IsNetAvail() AndAlso Not (New WebClient).DownloadString(My.Resources.link_ver).Contains(My.Resources.app_ver) Then
             Show($"「{My.Resources.app_true_name}」新しいバージョンが利用可能！", "更新", OK, Information)
             Run(New FrmUpdate)
@@ -78,7 +80,7 @@ Friend Module Common
     ''' End process.
     ''' </summary>
     ''' <param name="name">Process name.</param>
-    Private Sub KillPrcs(name As String)
+    Friend Sub KillPrcs(name As String)
         If GetProcessesByName(name).Count > 0 Then
             For Each item In GetProcessesByName(name)
                 item.Kill()
@@ -87,14 +89,21 @@ Friend Module Common
     End Sub
 
     ''' <summary>
-    ''' Run application.
+    ''' Kill excel.
     ''' </summary>
-    Friend Sub RunApp()
+    Private Sub KillXl()
         ForegroundColor = Yellow
         Write("警告：このアプリケーションを使用する前に、すべての「エクセル」を閉じてください。「エンター」キーを押して続行します...")
         ReadLine()
-        ChkUpd()
         KillPrcs(XL_NAME)
+    End Sub
+
+    ''' <summary>
+    ''' Run application.
+    ''' </summary>
+    Friend Sub RunApp()
+        ChkUpd()
+        KillXl()
         Dim xlApp As New Microsoft.Office.Interop.Excel.Application
         Dim ofd As New OpenFileDialog With {
             .Multiselect = False,
