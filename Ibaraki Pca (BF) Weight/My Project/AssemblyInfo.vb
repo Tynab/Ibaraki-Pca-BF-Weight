@@ -13,8 +13,8 @@ Imports System.Runtime.InteropServices
 <Assembly: AssemblyDescription("茨城 (プレキャス - BF) 重量")>
 <Assembly: AssemblyCompany("YAN")>
 <Assembly: AssemblyProduct("Ibaraki Pca (BF) Weight")>
-<Assembly: AssemblyCopyright("Copyright © Yami An")>
-<Assembly: AssemblyTrademark("Nephilim")>
+<Assembly: AssemblyCopyright("Copyright ©  2022")>
+<Assembly: AssemblyTrademark("Yami An")>
 
 <Assembly: ComVisible(False)>
 
@@ -32,6 +32,6 @@ Imports System.Runtime.InteropServices
 ' by using the '*' as shown below:
 ' <Assembly: AssemblyVersion("1.0.*")>
 
-<Assembly: AssemblyVersion("22.10.17.0")>
-<Assembly: AssemblyFileVersion("22.10.17.0")>
+<Assembly: AssemblyVersion("22.10.30.0")>
+<Assembly: AssemblyFileVersion("22.10.30.0")>
 <Assembly: NeutralResourcesLanguage("ja")>
