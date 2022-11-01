@@ -79,7 +79,7 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Looks up a localized string similar to 22.10.30.
+        '''  Looks up a localized string similar to 22.11.1.
         '''</summary>
         Friend ReadOnly Property app_ver() As String
             Get
@@ -117,9 +117,9 @@ Namespace My.Resources
         '''<summary>
         '''  Looks up a localized resource of type System.Drawing.Bitmap.
         '''</summary>
-        Friend ReadOnly Property gUpdating() As System.Drawing.Bitmap
+        Friend ReadOnly Property gUpdate() As System.Drawing.Bitmap
             Get
-                Dim obj As Object = ResourceManager.GetObject("gUpdating", resourceCulture)
+                Dim obj As Object = ResourceManager.GetObject("gUpdate", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
             End Get
         End Property

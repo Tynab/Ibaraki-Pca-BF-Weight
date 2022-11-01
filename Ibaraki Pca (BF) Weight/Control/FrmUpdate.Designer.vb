@@ -35,6 +35,9 @@ Partial Class FrmUpdate
         CType(Me.picUpdating, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
+        'tmrMain
+        '
+        '
         'pnlMain
         '
         Me.pnlMain.BackColor = System.Drawing.Color.White
@@ -93,7 +96,7 @@ Partial Class FrmUpdate
         '
         Me.picUpdating.BackColor = System.Drawing.Color.Transparent
         Me.picUpdating.Dock = System.Windows.Forms.DockStyle.Top
-        Me.picUpdating.Image = Global.Ibaraki_Pca__BF__Weight.My.Resources.Resources.gUpdating
+        Me.picUpdating.Image = Global.Ibaraki_Pca__BF__Weight.My.Resources.Resources.gUpdate
         Me.picUpdating.Location = New System.Drawing.Point(0, 20)
         Me.picUpdating.Margin = New System.Windows.Forms.Padding(0)
         Me.picUpdating.Name = "picUpdating"
@@ -134,7 +137,6 @@ Partial Class FrmUpdate
         Me.StartPosition = System.Windows.Forms.FormStartPosition.Manual
         Me.Text = "更新中..."
         Me.TopMost = True
-        Me.TransparencyKey = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.pnlMain.ResumeLayout(False)
         CType(Me.picUpdating, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)

@@ -126,7 +126,7 @@
     <comment>tên thật phần mềm</comment>
   </data>
   <data name="app_ver" xml:space="preserve">
-    <value>22.10.30</value>
+    <value>22.11.1</value>
     <comment>phiên bản phần mềm</comment>
   </data>
   <data name="cc_text" xml:space="preserve">
@@ -142,8 +142,8 @@
     <comment>tên tập đoàn</comment>
   </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="gUpdating" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\gUpdating.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="gUpdate" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\gUpdate.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="key_ser" xml:space="preserve">
     <value>WUFOIOiMqOWfjiAo44OX44Os44Kt44Oj44K5IC0gQkYpIOmHjemHjw==</value>
