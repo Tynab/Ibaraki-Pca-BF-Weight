@@ -26,9 +26,15 @@ Public Class FrmUpdate
 #End Region
 
 #Region "Events"
-    ' Form shown
-    Private Sub FrmUpdate_Shown(sender As Object, e As EventArgs) Handles MyBase.Shown
+    ' Load frm
+    Private Sub FrmUpdate_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        lblCapacity.Text = ""
+        lblPercent.Text = ""
         pnlProgressBar.Width = 1
+    End Sub
+
+    ' Shown frm
+    Private Sub FrmUpdate_Shown(sender As Object, e As EventArgs) Handles MyBase.Shown
         FIFrm()
         CrtDirAdv(FRNT_PATH)
         DelFileAdv(FILE_SETUP_ADR)
@@ -44,19 +50,23 @@ Public Class FrmUpdate
         pnlProgressBar.Width = CInt(Ceiling(e.ProgressPercentage * Width / 100D))
     End Sub
 
-    ' Timer main
+    ' tmr main
     Private Sub TmrMain_Tick(sender As Object, e As EventArgs) Handles tmrMain.Tick
         If lblPercent.Text = "100%" Then
             tmrMain.StopAdv()
-            Start(FILE_SETUP_ADR)
-            FOFrm()
             Close()
         End If
     End Sub
 
-    ' Form closing
+    ' Closing frm
     Private Sub FrmUpdate_FormClosing(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing
+        FOFrm()
         KillPrcs(My.Resources.app_name)
+    End Sub
+
+    ' Closed frm
+    Private Sub FrmUpdate_FormClosed(sender As Object, e As FormClosedEventArgs) Handles MyBase.FormClosed
+        Start(FILE_SETUP_ADR)
     End Sub
 #End Region
 End Class
