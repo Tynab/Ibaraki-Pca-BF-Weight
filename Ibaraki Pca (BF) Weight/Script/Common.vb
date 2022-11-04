@@ -7,10 +7,6 @@ Imports System.Net
 Imports System.Runtime.CompilerServices
 Imports System.Threading.Thread
 Imports System.Windows.Forms
-Imports System.Windows.Forms.Application
-Imports System.Windows.Forms.MessageBox
-Imports System.Windows.Forms.MessageBoxButtons
-Imports System.Windows.Forms.MessageBoxIcon
 
 Friend Module Common
 #Region "Helper"
@@ -36,8 +32,9 @@ Friend Module Common
     Private Sub ChkUpd()
         HdrSty("アップデートの確認...")
         If IsNetAvail() AndAlso Not (New WebClient).DownloadString(My.Resources.link_ver).Contains(My.Resources.app_ver) Then
-            Show($"「{My.Resources.app_true_name}」新しいバージョンが利用可能！", "更新", OK, Information)
-            Run(New FrmUpdate)
+            MsgBox($"「{My.Resources.app_true_name}」新しいバージョンが利用可能！", 262144, Title:="更新")
+            Dim frmUpd = New FrmUpdate
+            frmUpd.ShowDialog()
         End If
     End Sub
 

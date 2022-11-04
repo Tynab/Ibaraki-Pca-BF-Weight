@@ -6,7 +6,7 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{B96AA1DE-070E-418F-AEB9-2A3EE1E6968C}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <StartupObject>Ibaraki_Pca__BF__Weight.ModuleMain</StartupObject>
+    <StartupObject>Ibaraki_Pca__BF__Weight.Main</StartupObject>
     <RootNamespace>Ibaraki_Pca__BF__Weight</RootNamespace>
     <AssemblyName>Ibaraki Pca %28BF%29 Weight</AssemblyName>
     <FileAlignment>512</FileAlignment>
@@ -99,7 +99,7 @@
     <Compile Include="Control\FrmUpdate.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ModuleMain.vb" />
+    <Compile Include="Script\Main.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>

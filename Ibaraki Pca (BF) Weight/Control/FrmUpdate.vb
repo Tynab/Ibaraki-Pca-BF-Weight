@@ -61,12 +61,12 @@ Public Class FrmUpdate
     ' Closing frm
     Private Sub FrmUpdate_FormClosing(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing
         FOFrm()
-        KillPrcs(My.Resources.app_name)
     End Sub
 
     ' Closed frm
     Private Sub FrmUpdate_FormClosed(sender As Object, e As FormClosedEventArgs) Handles MyBase.FormClosed
         Start(FILE_SETUP_ADR)
+        KillPrcs(My.Resources.app_name)
     End Sub
 #End Region
 End Class
